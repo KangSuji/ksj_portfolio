@@ -229,6 +229,12 @@
     width: 100px;
     height: 30px;
   }
+  .skil-bg .skil-name {
+    font-size: 1.75rem;
+  }
+  .skil-bg .skil-name.long {
+    font-size: 1.25rem;
+  }
   .about__section,
   .project-section01 {
     margin-top: 90px;
@@ -272,6 +278,11 @@
   }
   .project__box-title > a > img {
     width: 1.75rem;
+  }
+  .project__group-title {
+    padding: 40px 10px 15px;
+    border-left: none;
+    font-size: 1.5rem;
   }
   .profile__section {
     padding-bottom: 50px;
@@ -336,6 +347,15 @@
   .skil-img svg {
     width: 80px;
     height: 30px;
+  }
+  .skil-bg .skil-name {
+    font-size: 1.125rem;
+  }
+  .skil-bg .skil-name.long {
+    font-size: 0.875rem;
+  }
+  .project-slide .project-desc {
+    display: none;
   }
   .go-git__btn {
     width: 150px;

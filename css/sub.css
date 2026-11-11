@@ -126,6 +126,119 @@
   line-height: 1.5;
 }
 
+/* 프로젝트 그룹 구분 (WORK / PUBLISHING / SIDE) */
+.project__group-title {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 6px 16px;
+  padding: 50px 30px 20px;
+  box-sizing: border-box;
+  border-left: 1px solid rgba(21, 21, 21, 0.15);
+  border-bottom: 2px solid #151515;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: #151515;
+}
+.project__group-title small {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #666;
+}
+
+/* 실무 프로젝트 (이미지 없는 텍스트 1단) */
+.right-box__inner.work .project__box {
+  width: 100%;
+}
+.right-box__inner.work .project__box-title {
+  flex-wrap: wrap;
+  gap: 8px 16px;
+}
+.project__period {
+  font-family: "Quicksand", "Noto Sans KR", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #666;
+  white-space: nowrap;
+}
+.project__tag {
+  display: inline-block;
+  margin-left: 10px;
+  padding: 3px 10px;
+  border: 1px solid #4f5bff;
+  border-radius: 50vw;
+  color: #4f5bff;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  vertical-align: middle;
+}
+.project__summary {
+  margin-top: 8px;
+  line-height: 1.6;
+  word-break: keep-all;
+}
+.project__meta {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 6px 16px;
+  margin-top: 16px;
+  line-height: 1.5;
+  word-break: keep-all;
+}
+.project__meta dt {
+  font-weight: 600;
+}
+.project__achievements {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 24px;
+}
+.project__achievements li {
+  position: relative;
+  padding-left: 20px;
+  line-height: 1.6;
+  word-break: keep-all;
+}
+.project__achievements li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #4f5bff;
+}
+.project__achievements strong {
+  display: block;
+  font-weight: 700;
+}
+.project__tasks {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px dashed rgba(21, 21, 21, 0.2);
+}
+.project__tasks li {
+  position: relative;
+  padding-left: 14px;
+  line-height: 1.6;
+  word-break: keep-all;
+  color: #444;
+}
+.project__tasks li::before {
+  content: "·";
+  position: absolute;
+  left: 2px;
+  font-weight: 700;
+}
+
 /******************************** 
             about
  *******************************/
@@ -402,4 +515,7 @@
   margin-bottom: 10px;
   font-weight: bold;
   font-family: "Pretendard-Regular";
+}
+.pro__subtext + .pro__subtext {
+  margin-top: 30px;
 }
