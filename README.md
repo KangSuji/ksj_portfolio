@@ -2,7 +2,7 @@
 
 Vue 3 · TypeScript로 클라우드·GPU·가상화 인프라 관리 플랫폼을 만들어 온 **프론트엔드 개발자 강수지**의 포트폴리오 사이트입니다.
 
-**사이트 바로가기 → https://kangsujiportfolio.netlify.app/**
+**사이트 바로가기 → https://kangsujiportfolio2023.netlify.app/**
 
 ## 소개
 
