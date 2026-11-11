@@ -2,7 +2,7 @@
   width: 100%;
   max-width: 1920px;
   margin: 0 auto;
-  padding: 80px 0 150px;
+  padding: 80px 0 0px;
 }
 .project-section {
   width: 100%;
@@ -422,100 +422,210 @@
 /************************
   profile
 ************************/
-.profile__content {
-  width: 100%;
-  padding: 50px 0;
-  border-top: 2px solid #000;
+/* 섹션: 왼쪽 제목(sticky) + 오른쪽 내용 */
+.resume {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 40px;
+  padding: 60px 0;
+  border-top: 2px solid #151515;
+  font-family: "Pretendard-Regular", "Noto Sans KR", sans-serif;
+  color: #151515;
 }
-.profile__tilte,
-.pro2-title {
+.resume__head {
+  position: sticky;
+  top: 40px;
+  align-self: start;
+}
+.resume__label {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #4f5bff;
+}
+.resume__title {
+  margin-top: 8px;
   font-size: 2.45rem;
-  font-family: "Pretendard-Regular";
-  font-weight: bold;
-}
-.profile__wrap {
-  display: flex;
-  flex-wrap: wrap;
-}
-.profile__row {
-  width: 20%;
-  font-family: "Pretendard-Regular";
-  margin: 20px 0;
-  text-align: center;
-  border-bottom: 1px solid #ddd;
-}
-.full__row {
-  width: 100%;
-}
-.half__row {
-  width: 50%;
-}
-.profile__th {
-  width: 100%;
-  font-weight: 600;
-  margin-bottom: 10px;
-  padding: 20px 0;
-  background-color: #ddd;
-}
-.profile__td {
-  padding: 10px 15px 20px;
-  box-sizing: border-box;
-}
-.txt-left {
-  text-align: left;
-}
-.profile__td ul li {
-  display: flex;
-  align-items: flex-start;
-  gap: 5px;
+  font-weight: 700;
   line-height: 1.2;
 }
-.profile__td ul li::before {
-  content: "";
-  display: block;
-  width: 4px;
-  height: 4px;
-  border-radius: 100%;
-  background-color: #151515;
-  flex-shrink: 0;
-  margin-top: 7px;
+.resume__body {
+  min-width: 0;
 }
-.profile__wrap2 .profile__row {
-  width: 16.666%;
+
+/* 항목: 왼쪽 기간 + 오른쪽 상세 */
+.resume-item {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 32px;
+  padding: 32px 0;
+  border-bottom: 1px solid #e5e5e5;
 }
-.profile__wrap3 .profile__row {
-  width: 25%;
+.resume-item:first-child {
+  padding-top: 0;
 }
-.profile__wrap2 {
-  width: 100%;
+.resume-item:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
 }
-.pro-wrap2__inner {
-  width: 100%;
-  max-width: 1550px;
-  margin: 0 auto;
+.resume-item__period {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
 }
-.pro2__content {
-  margin: 50px 0;
+.resume-item__date {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.0625rem;
+  font-weight: 700;
+  white-space: nowrap;
 }
-.pro__subtitle {
+.resume-item__name {
   font-size: 1.75rem;
-  font-weight: bold;
-  margin-bottom: 20px;
+  font-weight: 700;
+  line-height: 1.3;
 }
-.pro__subtext {
-  width: 100%;
-  padding: 0 15px;
-  box-sizing: border-box;
+.resume-item__role {
+  margin-top: 6px;
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  color: #555;
+}
+.resume-item__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 28px;
+  margin-top: 16px;
+  padding: 14px 18px;
+  border-radius: 10px;
+  background-color: #f5f5f7;
+  line-height: 1.6;
+}
+.resume-item__meta > div {
+  display: flex;
+  gap: 10px;
+}
+.resume-item__meta dt {
+  font-weight: 700;
+  white-space: nowrap;
+}
+.resume-item__meta dd {
+  color: #444;
+}
+.resume-item__list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 18px;
+}
+.resume-item__list li {
+  position: relative;
+  padding-left: 16px;
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  color: #222;
+}
+.resume-item__list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.7em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #151515;
+}
+.resume-item--current .resume-item__list li::before {
+  background-color: #4f5bff;
+}
+.resume-item__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+.resume-item__tags li {
+  padding: 6px 12px;
+  border-radius: 8px;
+  background-color: #f5f5f7;
+  font-size: 0.9375rem;
+  color: #444;
+}
+.resume-item__badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+.resume-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border: 1px solid #151515;
+  border-radius: 50vw;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  line-height: 1.4;
+  white-space: nowrap;
+}
+.resume-badge--accent {
+  border-color: #4f5bff;
+  background-color: #4f5bff;
+  color: #fff;
+}
+.resume-badge--muted {
+  border-color: #ccc;
+  color: #777;
+}
+
+/* 자기소개 */
+.intro__lead {
+  font-size: 1.75rem;
+  font-weight: 700;
   line-height: 1.5;
-  word-break: keep-all;
-  font-family: "Noto Sans KR", sans-serif;
 }
-.pro__subtext .sub__title {
-  display: block;
-  margin-bottom: 10px;
-  font-weight: bold;
-  font-family: "Pretendard-Regular";
+.intro__lead strong {
+  color: #4f5bff;
 }
-.pro__subtext + .pro__subtext {
-  margin-top: 30px;
+.intro__cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 32px;
+}
+.intro-card {
+  padding: 28px;
+  border: 1px solid #e5e5e5;
+  border-radius: 16px;
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+.intro-card:hover {
+  border-color: #151515;
+  transform: translateY(-4px);
+}
+.intro-card__num {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #4f5bff;
+}
+.intro-card__title {
+  margin: 10px 0 12px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+.intro-card p {
+  line-height: 1.75;
+  color: #444;
+}
+.intro__closing {
+  margin-top: 32px;
+  padding: 24px 28px;
+  border-left: 4px solid #4f5bff;
+  border-radius: 0 12px 12px 0;
+  background-color: #f5f5f7;
+  font-size: 1.0625rem;
+  line-height: 1.8;
 }

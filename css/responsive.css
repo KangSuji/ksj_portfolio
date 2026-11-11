@@ -4,9 +4,9 @@
     padding: 0 15px;
     box-sizing: border-box;
   }
-  .profile__content {
-    padding: 50px 15px;
-    box-sizing: border-box;
+  .resume {
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 @media (max-width: 1280px) {
@@ -20,6 +20,16 @@
 @media (max-width: 1024px) {
   .logo-wrap .logo {
     font-size: 2rem;
+  }
+  .resume {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .resume__head {
+    position: static;
+  }
+  .intro__cards {
+    grid-template-columns: 1fr;
   }
 }
 @media (max-width: 900px) {
@@ -287,26 +297,37 @@
   .profile__section {
     padding-bottom: 50px;
   }
-  .profile__wrap {
+  .resume {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .resume__title {
+    font-size: 2rem;
+  }
+  .resume-item {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 24px 0;
+  }
+  .resume-item__period {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .resume-item__name {
+    font-size: 1.5rem;
+  }
+  .resume-item__meta {
     flex-direction: column;
   }
-  .profile__row,
-  .profile__wrap2 .profile__row,
-  .profile__wrap3 .profile__row {
-    width: 100%;
-    margin: 0;
+  .intro__lead {
+    font-size: 1.375rem;
   }
-  .profile__tilte,
-  .pro2-title,
-  .pro__subtitle,
-  .pro__subtext .sub__title {
-    text-align: center;
+  .intro-card {
+    padding: 22px;
   }
-  .pro2__content {
-    margin-top: 30px;
-  }
-  .profile__content {
-    padding-bottom: 30px;
+  .intro__closing {
+    padding: 20px;
   }
   .home-main-section01 {
     padding: 120px 0 60px;
